@@ -29,17 +29,18 @@ public class ProductController {
             producto.setQuantity(cantidad);
             producto.setInStock(inStock);
             producto.setId(id);
-            if (!ProductValidators.validar(producto)) {
-                System.out.println("No se pudo registrar el producto. Verifique los datos ingresados");
-                return;
+            String mensajeError = ProductValidators.validarYObtenerMensaje(producto);
+            if(mensajeError != null){
+                throw new IllegalArgumentException(mensajeError);
             }
             if (existeProducto(producto)) {
                 System.out.println("No se puede registrar este producto, ya se encuentra registrado");
-                return;
+                 throw new IllegalArgumentException("Este producto ya se encuentra registrado");
+                
             }
             services.createProduct(producto);
 
-        } catch (Exception e) {
+        } catch (ExceptionInInitializerError e) {
             System.out.println(e.getMessage());
             throw e;
         }

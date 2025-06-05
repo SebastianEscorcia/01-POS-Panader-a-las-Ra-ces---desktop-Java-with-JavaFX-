@@ -24,13 +24,13 @@ public class ProductServices {
             for (Product product : listProducts) {
                 if (product.equals(producto)) {
                     System.out.print("El producto ya existe");
-                    return;
+                    throw new IllegalArgumentException("El producto ya existe");
                 }
             }
 
             listProducts.add(producto);
             System.out.println("Producto Creado Correctamente ");
-        } catch (Exception e) {
+        } catch (ExceptionInInitializerError e) {
             e.getMessage();
         }
     }

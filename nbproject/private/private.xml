@@ -3,12 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/registro_producto/registro_producto.fxml</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/registro_producto/Registro_productoController.java</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/registro_producto/registro_producto.css</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/login/login.fxml</file>
             <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/main.java</file>
-            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/menu/PresentationMenu.java</file>
             <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/controllers/ProductController.java</file>
             <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/BLL/ProductServices.java</file>
             <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/validators/ProductValidators.java</file>
-            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/DAL/models/Product.java</file>
         </group>
     </open-files>
 </project-private>

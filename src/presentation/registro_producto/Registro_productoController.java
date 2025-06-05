@@ -42,7 +42,7 @@ public class Registro_productoController implements Initializable {
 
             // Llamar al backend
             productController.crearProducto(nombre, cantidad, precio, inStock, id);
-
+            
             // Mostrar confirmación
             mostrarAlerta("Éxito", "Producto registrado correctamente.", AlertType.INFORMATION);
 

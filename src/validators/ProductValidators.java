@@ -12,43 +12,32 @@ import DAL.models.Product;
  */
 public class ProductValidators {
 
-    public static boolean validar(Product producto) {
-        return validarNombre(producto.getName())
-                && validarPrecio(producto.getPrice())
-                && validarStock(producto.getQuantity())
-                && validarId(producto.getId());
+    public static String validarYObtenerMensaje(Product producto) {
+        if (!validarNombre(producto.getName()))
+            return "El nombre debe tener entre 4 y 100 caracteres";
+        if (!validarPrecio(producto.getPrice()))
+            return "El precio debe ser mayor a 0";
+        if (!validarStock(producto.getQuantity()))
+            return "La cantidad del producto debe ser mayor a 0";
+        if (!validarId(producto.getId()))
+            return "El identificador no puede estar vacío";
+
+        return null; // Todo está bien
     }
 
     public static boolean validarNombre(String nombre) {
-        if (nombre == null || nombre.length() < 4 || nombre.length() > 100) {
-            System.out.println("El nombre debe tener entre 4 y 100 caracteres");
-            return false;
-        } 
-        return true;
+        return nombre != null && nombre.length() >= 4 && nombre.length() <= 100;
     }
 
     public static boolean validarPrecio(double price) {
-        if (price <= 0) {
-            System.out.println("El precio debe ser mayor a 0");
-            return false;
-        }
-        return true;
+        return price > 0;
     }
 
     public static boolean validarStock(int stock) {
-
-        if (stock <= 0) {
-            System.out.println("La cantidad del producto debe ser mayor a 0");
-            return false;
-        }
-        return true;
+        return stock > 0;
     }
 
     public static boolean validarId(String id) {
-        if (id == null || id.trim().isEmpty()) {
-            System.out.println("El identificador no puede estar vacio");
-            return false;
-        }
-        return true;
+        return id != null && !id.trim().isEmpty();
     }
 }
