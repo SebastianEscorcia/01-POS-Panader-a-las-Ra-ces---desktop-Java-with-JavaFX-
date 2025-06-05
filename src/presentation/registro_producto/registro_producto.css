@@ -1,0 +1,58 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+/* Fondo del panel encima de la imagen */
+.form-panel {
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+/* Título */
+.titulo-formulario {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4e2e0c;
+    -fx-alignment: center;
+}
+
+/* Etiquetas */
+.label-formulario {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5a3b1c;
+}
+
+/* Campos de texto */
+.textfield-formulario {
+    -fx-background-color: #fff8dc;
+    -fx-border-color: #d6a85a;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 6px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #3e2b15;
+}
+
+/* Botón registrar */
+.boton-principal {
+    -fx-background-color: #d6a85a;
+    -fx-text-fill: #3e2b15;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 1, 1);
+    -fx-border-color: transparent;
+}
+
+.boton-principal:hover {
+    -fx-background-color: #b87c2f;
+    -fx-text-fill: white;
+}

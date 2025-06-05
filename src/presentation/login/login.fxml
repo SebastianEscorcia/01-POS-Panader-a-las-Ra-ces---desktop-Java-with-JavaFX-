@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="998.0" prefWidth="885.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.login.LoginController">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="106.0" prefWidth="920.0" style="-fx-background-color: #f5c77c;">
+         <children>
+            <Label alignment="CENTER" layoutX="272.0" prefHeight="106.0" prefWidth="376.0" style="-fx-border-color: transparent; -fx-background-color: #fcd48d; -fx-text-fill: #4e2e0c; -fx-font-weight: bold;" styleClass="label-formulario" text="INICIO DE SESIÓN" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="928.0" fitWidth="303.0" layoutY="106.0" opacity="0.89" pickOnBounds="true" preserveRatio="true" style="-fx-fit-width: 920; -fx-fit-height: 920;">
+         <image>
+            <Image url="@../../../../../../../Downloads/Panadería%20las%20raices918px.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="255.0" layoutY="382.0" prefHeight="278.0" prefWidth="456.0" style="-fx-background-color: transparent;">
+         <children>
+            <Label layoutX="148.0" layoutY="14.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #5a3b1c; -fx-padding: 5px 0px 5px 5px;" styleClass="label-formulario" text="USUARIO" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+            </Label>
+            <TextField alignment="CENTER" layoutX="100.0" layoutY="49.0" promptText="Ingresar usuario" style="-fx-background-color: #fff8dc; -fx-border-color: #d6a85a; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 6; -fx-font-size: 14;">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+            </TextField>
+            <Label layoutX="129.0" layoutY="92.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #5a3b1c; -fx-padding: 5px 0px 5px 5px;" styleClass="label-formulario" text="CONTRASEÑA" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+            </Label>
+            <TextField alignment="CENTER" layoutX="100.0" layoutY="122.0" promptText="Ingresar Contraseña" style="-fx-background-color: #fff8dc; -fx-border-color: #d6a85a; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 6; -fx-font-size: 14;">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+            </TextField>
+            <Button layoutX="135.0" layoutY="169.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" styleClass="boton-principal" stylesheets="@login.css" text="INICIAR" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

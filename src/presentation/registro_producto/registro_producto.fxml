@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="998.0" prefWidth="885.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.registro_producto.Registro_productoController">
+    <stylesheets>
+        <URL value="@registro_producto.css" />
+    </stylesheets>
+
+    <children>
+        <!-- Imagen de fondo -->
+        <ImageView fitWidth="885.0" fitHeight="998.0" preserveRatio="false" pickOnBounds="true">
+            <image>
+                <Image url="@../../../../../../../Downloads/Panadería%20las%20raices918px.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Panel transparente encima -->
+        <Pane layoutX="100.0" layoutY="150.0" prefHeight="600.0" prefWidth="685.0" styleClass="form-panel">
+            <children>
+                <Label layoutX="200.0" layoutY="20.0" text="REGISTRO DE PRODUCTO" styleClass="titulo-formulario"/>
+
+                <Label layoutX="60.0" layoutY="100.0" text="Nombre:" styleClass="label-formulario" />
+                <TextField fx:id="txtNombre" layoutX="180.0" layoutY="95.0" prefWidth="400.0" styleClass="textfield-formulario" />
+
+                <Label layoutX="60.0" layoutY="160.0" text="Cantidad:" styleClass="label-formulario" />
+                <TextField fx:id="txtCantidad" layoutX="180.0" layoutY="155.0" prefWidth="400.0" styleClass="textfield-formulario" />
+
+                <Label layoutX="60.0" layoutY="220.0" text="Precio:" styleClass="label-formulario" />
+                <TextField fx:id="txtPrecio" layoutX="180.0" layoutY="215.0" prefWidth="400.0" styleClass="textfield-formulario" />
+
+                <Label layoutX="60.0" layoutY="280.0" text="ID:" styleClass="label-formulario" />
+                <TextField fx:id="txtId" layoutX="180.0" layoutY="275.0" prefWidth="400.0" styleClass="textfield-formulario" />
+
+                <Label layoutX="60.0" layoutY="340.0" text="En Stock:" styleClass="label-formulario" />
+                <CheckBox fx:id="chkStock" layoutX="180.0" layoutY="340.0" />
+
+                <Button text="Registrar" layoutX="280.0" layoutY="420.0" styleClass="boton-principal" onAction="#registrarProducto" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
