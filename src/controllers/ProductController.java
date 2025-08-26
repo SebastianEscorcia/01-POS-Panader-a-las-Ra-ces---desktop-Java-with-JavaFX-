@@ -20,7 +20,7 @@ public class ProductController {
         this.services = new ProductServices();
     }
 
-    public void crearProducto(String nombre, int cantidad, double precio, boolean inStock, String id) {
+    public void crearProducto(String nombre, int cantidad, double precio, boolean inStock, String id, String rutaImagen) {
 
         Product producto = new Product();
         try {
@@ -29,6 +29,7 @@ public class ProductController {
             producto.setQuantity(cantidad);
             producto.setInStock(inStock);
             producto.setId(id);
+            producto.setRutaImagen(rutaImagen);
             String mensajeError = ProductValidators.validarYObtenerMensaje(producto);
             if(mensajeError != null){
                 throw new IllegalArgumentException(mensajeError);
@@ -55,9 +56,9 @@ public class ProductController {
         return services.searchProduct(nombre);
     }
 
-    public void actualizarProducto(Product producto, String name, double price, int stock, boolean disponible) {
+    public void actualizarProducto(Product producto, String name, double price, int stock, boolean disponible, String  rutaImagen) {
         try {
-            boolean actualizado = services.updateProduct(producto, name, price, stock, disponible);
+            boolean actualizado = services.updateProduct(producto, name, price, stock, disponible,rutaImagen );
             if (actualizado) {
                 System.out.println("Producto actualizado Correctamente");
             }

@@ -27,7 +27,6 @@ public class ProductServices {
                     throw new IllegalArgumentException("El producto ya existe");
                 }
             }
-
             listProducts.add(producto);
             System.out.println("Producto Creado Correctamente ");
         } catch (ExceptionInInitializerError e) {
@@ -52,7 +51,7 @@ public class ProductServices {
         return mensaje;
     }
 
-    public boolean updateProduct(Product producto, String name, double price, int stock, boolean disponible) {
+    public boolean updateProduct(Product producto, String name, double price, int stock, boolean disponible , String rutaImagen) {
         try {
             for (Product product : listProducts) {
                 if (product.equals(producto)) {
@@ -60,6 +59,7 @@ public class ProductServices {
                     product.setPrice(price);
                     product.setQuantity(stock);
                     product.setInStock(disponible);
+                    product.setRutaImagen(rutaImagen);
                     return true; // éxito
                 }
             }

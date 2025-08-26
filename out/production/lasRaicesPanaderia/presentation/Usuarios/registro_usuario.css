@@ -1,0 +1,142 @@
+/* Fondo general del formulario */
+.mainFxmlClass {
+    -fx-background-color: transparent;
+    -fx-padding: 20;
+}
+.form-panel {
+    -fx-background-color: #e0cbb5; /* tono café con leche suave */
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-padding: 20;
+    -fx-max-width: 700;
+    -fx-max-height: 600;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 12, 0.6, 0, 2);
+    -fx-alignment: center;
+}
+
+/* Título del formulario */
+.titulo-formulario {
+    -fx-text-fill: #3e2b15;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Campos de texto */
+.text-field, .password-field, .combo-box {
+    -fx-pref-width: 300;
+    -fx-padding: 10;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #ccc;
+}
+
+/* Botón registrar */
+.boton-registrar {
+    -fx-background-color: #d6a85a;
+    -fx-text-fill: #3e2b15;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 1, 1);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+
+/* Hover: cambia color y agranda un poquito */
+.boton-registrar:hover {
+    -fx-background-color: #b87c2f;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* Si está deshabilitado */
+.boton-registrar:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+.icono-usuario {
+    -fx-image: url("/resources/icons/agregar-usuario.png");
+}
+
+.icono-password {
+    -fx-image: url("/resources/icons/num-lock.png");
+}
+
+.icono-rol {
+    -fx-image: url("/resources/icons/lista-de-verificacion.png");
+}
+
+ImageView.icono-usuario,
+ImageView.icono-password,
+ImageView.icono-rol {
+    -fx-opacity: 0.7;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+ImageView.icono-usuario:hover,
+ImageView.icono-password:hover,
+ImageView.icono-rol:hover {
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 4, 0, 1, 1);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-cursor: hand;
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused {
+    -fx-border-color: #d6a85a;
+    -fx-border-width: 2;
+    -fx-background-color: #fffbe6;
+}
+
+.table-view {
+    -fx-background-color: #f2e8dc; /* fondo cálido beige */
+    -fx-border-color: #caa776;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+    -fx-table-cell-border-color: #caa776;
+    -fx-control-inner-background: #f2e8dc;
+    -fx-font-size: 13px;
+
+}
+
+/* Cabecera */
+.table-view .column-header-background {
+    -fx-background-color: #caa776;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 34px;
+    -fx-font-weight: bold;
+}
+#colNombreUsuario .label{
+    -fx-text-fill: black;
+
+}
+#colRol .label{
+    -fx-text-fill: black;
+}
+
+
+/* Filas */
+.table-row-cell {
+    -fx-background-color: transparent;
+}
+
+/* Selección */
+.table-row-cell:filled:selected,
+.table-row-cell:focused:selected {
+    -fx-background-color: #b9dfff; /* azul pastel */
+    -fx-text-fill: #1a1a1a;
+}

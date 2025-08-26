@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.administrador.Dashboard_administradorController">
+
+    <left>
+        <VBox prefHeight="600.0" prefWidth="234.0" spacing="20.0" style="-fx-background-color: #4e2e0c; -fx-padding: 20;" styleClass="mainFxmlClass" stylesheets="@dashboard_administrador.css">
+            <Label prefHeight="27.0" prefWidth="174.0" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Panel Administrador" />
+
+            <Label styleClass="labelBackgroud" stylesheets="@dashboard_administrador.css" text="Producto" />
+
+            <Button fx:id="btnCrearProducto" onAction="#abrirCrearProducto" styleClass="boton-lateral" text="Crear Producto" />
+            <Label styleClass="labelBackgroud" text="Usuario" />
+
+            <Button fx:id="btnCrearUsuario" onAction="#abrirCrearUsuario" prefHeight="33.0" prefWidth="118.0" styleClass="boton-lateral" text="Crear Usuario" />
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contenidoPrincipal" styleClass="mainFxmlClass">
+            <children>
+                <ImageView fx:id="fondoImagen" pickOnBounds="true" preserveRatio="false">
+                    <image>
+                        <Image url="@../../resources/images/Panadería las raices918px.jpg" />
+                    </image>
+                </ImageView>
+
+                <AnchorPane fx:id="contenedorContenido" styleClass="image-view" StackPane.alignment="CENTER">
+                    <!-- Aquí se cargan las vistas dinámicas -->
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </center>
+
+    <stylesheets>
+        <URL value="@dashboard_administrador.css" />
+    </stylesheets>
+</BorderPane>

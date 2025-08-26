@@ -19,10 +19,15 @@ public class ProductValidators {
             return "El precio debe ser mayor a 0";
         if (!validarStock(producto.getQuantity()))
             return "La cantidad del producto debe ser mayor a 0";
+        if (!validarRutaImagen(producto.getRutaImagen()))
+            return "Ingrese la imagen por favor";
         if (!validarId(producto.getId()))
             return "El identificador no puede estar vacío";
 
         return null; // Todo está bien
+    }
+    public static boolean validarRutaImagen(String rutaImagen) {
+        return rutaImagen != null && !rutaImagen.isEmpty();
     }
 
     public static boolean validarNombre(String nombre) {

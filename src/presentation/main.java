@@ -10,17 +10,16 @@ public class main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        // Cargar el archivo FXML de la vista inicial (por ejemplo, el login o registro)
-        Parent root = FXMLLoader.load(getClass().getResource("/presentation/registro_producto/registro_producto.fxml"));
+        // Cambiar la ruta al archivo login.fxml
+        Parent root = FXMLLoader.load(getClass().getResource("/presentation/login/login.fxml"));
 
-        // Crear la escena y mostrarla
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Panadería Las Raíces - Registro de Producto");
+        stage.setTitle("Panadería Las Raíces - Inicio de Sesión");
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch(args);  // Este método inicia JavaFX
+        launch(args);
     }
 }

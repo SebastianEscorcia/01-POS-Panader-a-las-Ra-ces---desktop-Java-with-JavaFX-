@@ -7,6 +7,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import java.io.File;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,6 +22,7 @@ public class Registro_productoController implements Initializable {
     @FXML private TextField txtPrecio;
     @FXML private TextField txtId;
     @FXML private CheckBox chkStock;
+    @FXML private TextField txtRutaImagen;
 
     private final ProductController productController;
 
@@ -39,9 +44,10 @@ public class Registro_productoController implements Initializable {
             double precio = Double.parseDouble(txtPrecio.getText());
             String id = txtId.getText();
             boolean inStock = chkStock.isSelected();
+            String rutaImagen = txtRutaImagen.getText();
 
             // Llamar al backend
-            productController.crearProducto(nombre, cantidad, precio, inStock, id);
+            productController.crearProducto(nombre, cantidad, precio, inStock, id, rutaImagen);
             
             // Mostrar confirmación
             mostrarAlerta("Éxito", "Producto registrado correctamente.", AlertType.INFORMATION);
@@ -70,5 +76,19 @@ public class Registro_productoController implements Initializable {
         txtPrecio.clear();
         txtId.clear();
         chkStock.setSelected(false);
+        txtRutaImagen.clear();
+    }
+    @FXML
+    private void seleccionarImagen() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Seleccionar imagen del producto");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Imágenes", "*.jpg", "*.png", "*.jpeg")
+        );
+
+        File archivo = fileChooser.showOpenDialog(new Stage());
+        if (archivo != null) {
+            txtRutaImagen.setText(archivo.getAbsolutePath());
+        }
     }
 }

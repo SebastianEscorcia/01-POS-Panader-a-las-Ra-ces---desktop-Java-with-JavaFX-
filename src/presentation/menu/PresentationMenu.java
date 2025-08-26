@@ -42,11 +42,11 @@ public class PresentationMenu {
 
     }
 
-    public void seleccionarOpcion(int op, String nombre, boolean disponible, double price, int stock, String id) {
+    public void seleccionarOpcion(int op, String nombre, boolean disponible, double price, int stock, String id, String rutaImagen) {
 
         switch (op) {
             case 1:
-                menuRegistrarProducto(nombre, disponible, price, stock, id);
+                menuRegistrarProducto(nombre, disponible, price, stock, id,  rutaImagen);
                 break;
             case 2:
 
@@ -66,7 +66,7 @@ public class PresentationMenu {
 
     }
 
-    public void menuRegistrarProducto(String nombre, boolean disponible, double price, int stock, String id) {
+    public void menuRegistrarProducto(String nombre, boolean disponible, double price, int stock, String id, String rutaImagen) {
         char op = 's';
         while (op == 's') {
             System.out.println("REGISTRO PRODUCTO");
@@ -101,7 +101,12 @@ public class PresentationMenu {
                 id = sc.nextLine();
             } while (!ProductValidators.validarId(id));
 
-            controller.crearProducto(nombre, stock, price, disponible, id);
+            do {
+                System.out.println("Ingre la imagen del producto (ruta) : ");
+                rutaImagen = sc.nextLine();
+            } while (ProductValidators.validarRutaImagen(rutaImagen));
+
+            controller.crearProducto(nombre, stock, price, disponible, id, rutaImagen);
             do {
                 System.out.println("¿Deseas registar otro producto (s/n)?");
                 op = sc.next().charAt(0);
@@ -126,6 +131,7 @@ public class PresentationMenu {
         boolean newDisponible = false;
         double newPrice;
         int newStock;
+        String newRutaImagen;
         char respuesta;
         sc.nextLine();
 
@@ -162,7 +168,11 @@ public class PresentationMenu {
                 }
 
             } while (respuesta != 's' && respuesta != 'S' && respuesta != 'n' && respuesta != 'N');
-        
-        controller.actualizarProducto(productoExistente,nombre, newPrice, newStock, newDisponible);
+
+        do {
+            System.out.println("Ingrese la imagen  del producto (ruta) : ");
+            newRutaImagen = sc.nextLine();
+        } while (!ProductValidators.validarRutaImagen(newRutaImagen));
+        controller.actualizarProducto(productoExistente,nombre, newPrice, newStock, newDisponible,  newRutaImagen);
     }
 }

@@ -15,14 +15,16 @@ public class Product {
     private int quantity;
     private double price;
     private boolean inStock;
+    private String rutaImagen;
     private String id;
 
-    public Product(String name, int quantity, double price, boolean inStock, String id) {
+    public Product(String name, int quantity, double price, boolean inStock, String id, String rutaImagen) {
         this.name = name;
         this.quantity = quantity;
         this.price = price;
         this.inStock = inStock;
         this.id = id;
+        this.rutaImagen = rutaImagen;
     }
     public Product(){};
 
@@ -68,6 +70,12 @@ public class Product {
 
     public void setId(String id) {
         this.id = id;
+    }
+    public String getRutaImagen() {
+        return rutaImagen;
+    }
+    public void setRutaImagen(String rutaImagen) {
+        this.rutaImagen = rutaImagen;
     }
     
     /**

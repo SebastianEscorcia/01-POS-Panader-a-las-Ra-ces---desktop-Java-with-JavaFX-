@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="492.0" prefWidth="733.0" stylesheets="@dashboard_trabajador.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.trabajador.DashboardTrabajadorController">
+
+    <!-- Panel Izquierdo -->
+    <left>
+        <VBox alignment="CENTER" minWidth="172.0" prefHeight="616.0" prefWidth="202.0" spacing="20.0" styleClass="panel-lateral">
+            <Label fx:id="lblNombreTrabajador" prefHeight="120.0" prefWidth="174.0" styleClass="label-nombre" text="Nombre del trabajador" />
+        </VBox>
+    </left>
+
+    <!-- Panel Derecho con Imagen -->
+    <center>
+        <ImageView fitHeight="616.0" fitWidth="619.0" preserveRatio="true">
+            <image>
+                <Image url="@../../resources/images/Panadería%20las%20raices918px.jpg" />
+            </image>
+        </ImageView>
+    </center>
+
+</BorderPane>

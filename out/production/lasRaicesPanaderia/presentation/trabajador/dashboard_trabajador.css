@@ -1,0 +1,13 @@
+.panel-lateral {
+    -fx-background-color: #5a3b1c;
+    -fx-padding: 40px 20px;
+    -fx-min-width: 200px;
+}
+
+.label-nombre {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}

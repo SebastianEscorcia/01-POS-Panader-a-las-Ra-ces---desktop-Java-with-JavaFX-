@@ -11,6 +11,15 @@
             <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/controllers/ProductController.java</file>
             <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/BLL/ProductServices.java</file>
             <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/validators/ProductValidators.java</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/administrador/dashboard_administrador.css</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/administrador/dashboard_administrador.fxml</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/administrador/Dashboard_administradorController.java</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/Usuarios/RegistrousuarioController.java</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/Usuarios/registro_usuario.css</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/Usuarios/registro_usuario.fxml</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/cliente/dashboard_cliente.css</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/cliente/dashboard_cliente.fxml</file>
+            <file>file:/C:/Users/GABRIEL%20POLO/OneDrive/Documentos/NetBeansProjects/lasRaicesPanaderia/src/presentation/cliente/Dashboard_clienteController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="mainFxmlClass" stylesheets="@registro_usuario.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.Usuarios.RegistrousuarioController">
+
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="15" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <StackPane alignment="CENTER">
+                <VBox alignment="TOP_CENTER" maxHeight="600" maxWidth="700" spacing="15" styleClass="form-panel">
+
+                    <Label styleClass="titulo-formulario" text="Registro de Usuario" />
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="icono-usuario">
+                            <image>
+                                <Image url="@../../resources/icons/agregar-usuario.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="txtNombreUsuario" promptText="Nombre de Usuario" styleClass="password-field" />
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" styleClass="icono-password">
+                            <image>
+                                <Image url="@../../resources/icons/num-lock.png" />
+                            </image>
+                        </ImageView>
+                        <PasswordField fx:id="txtPassword" promptText="Contraseña" styleClass="password-field" />
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" styleClass="icono-rol">
+                            <image>
+                                <Image url="@../../resources/icons/lista-de-verificacion.png" />
+                            </image>
+                        </ImageView>
+                        <ComboBox fx:id="comboRol" promptText="Seleccionar Rol" styleClass="combo-box" />
+                    </HBox>
+
+                    <Button fx:id="btnRegistrar" onAction="#registrarUsuario" styleClass="boton-registrar">
+                        <graphic>
+                            <ImageView fitHeight="20" fitWidth="20">
+                                <image>
+                                    <Image url="@../../resources/icons/comprobado.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                        <text>Registrar Usuario</text>
+                    </Button>
+
+                    <TableView fx:id="tablaUsuarios" prefHeight="200" style="-fx-border-color: #ccc;">
+                        <columns>
+                            <TableColumn fx:id="colNombreUsuario" prefWidth="183.8000030517578" text="Nombre de Usuario" />
+                            <TableColumn fx:id="colRol" prefWidth="147.3999786376953" text="Rol" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </StackPane>
+
+        </VBox>
+    </children>
+</AnchorPane>
